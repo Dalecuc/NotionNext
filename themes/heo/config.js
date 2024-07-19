@@ -1,12 +1,12 @@
 const CONFIG = {
   HEO_HOME_BANNER_ENABLE: true,
 
-  HEO_SITE_CREATE_TIME: '2024-07-08', // 建站日期，用于计算网站运行的第几天
+  HEO_SITE_CREATE_TIME: '2023-07-29', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到 Duoyang 的博客', url: 'https://liduoyang.com' },
-    { title: '鲸饮未吞海，剑气已横秋', url: 'https://liduoyang.com' }
+    { title: '一个人要仰望多少次', url: 'https://www.best-poems.net/poem/blowin-in-the-wind-by-bob-dylan.html' },
+    { title: '才能看见苍穹', url: 'https://www.best-poems.net/poem/blowin-in-the-wind-by-bob-dylan.html' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -15,30 +15,28 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: '记录生活',
-  HEO_HERO_TITLE_2: '学习知识',
-  HEO_HERO_TITLE_3: 'LIDUOYANG.COM',
-  HEO_HERO_TITLE_4: '英特纳雄耐尔',
-  HEO_HERO_TITLE_5: '就一定要实现',
-  HEO_HERO_TITLE_LINK: 'https://liduoyang.com',
+  HERO_TITLE_1: 'Hello',
+  HERO_TITLE_2: 'World',
+  HERO_TITLE_3: 'return \'all right\'',
+  HERO_TITLE_4: 'L\'Internationale',
+  HERO_TITLE_5: 'Sera le genre humain',
+  HERO_TITLE_LINK: 'https://github.com/Daleveral',
 
   // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_1: { title: '浮生若梦', url: '/tag/浮生若梦' },
-  HEO_HERO_CATEGORY_2: { title: '知识分享', url: '/tag/知识分享' },
-  HEO_HERO_CATEGORY_3: { title: '个人随笔', url: '/tag/个人随笔' },
+  HERO_CATEGORY_1: { title: 'National Geographic', url: 'https://www.nationalgeographic.com/' },
+  HERO_CATEGORY_2: { title: 'Medium', url: 'https://medium.com/' },
+  HERO_CATEGORY_3: { title: 'Hello GitHub', url: 'https://github.com/521xueweihan/HelloGitHub' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
-  HEO_HERO_RECOMMEND_POST_TAG: '推荐',
+  HEO_HERO_RECOMMEND_POST_TAG: '',
   HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
   //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: [
     '你好！我是',
-    '🔍 羽毛球爱好者',
-    '🤝 小提琴初学者',
-    '🏃 编程爱好者',
-    '🏠 一名进阶的大学生',
+    '🔍 专扣细节强迫症',
+    '🏃 脚踏实地行动派',
     '🤖️ 数码科技爱好者',
     '🧱 团队小组发动机'
   ],
@@ -51,71 +49,72 @@ const CONFIG = {
   HEO_INFO_CARD_URL3: 'https://liduoyang.com/about',
   HEO_INFO_CARD_TEXT3: '了解更多',
 
+
   // 用户技能图标
-  HEO_GROUP_ICONS: [
+  GROUP_ICONS: [
     {
-      title_1: 'AfterEffect',
-      img_1: '/images/heo/20239df3f66615b532ce571eac6d14ff21cf072602.webp',
-      color_1: '#989bf8',
-      title_2: 'Sketch',
-      img_2: '/images/heo/2023e0ded7b724a39f12d59c3dc8fbdc7cbe074202.webp',
+      title_1: 'ps',
+      img_1: '/images/heo/ps.webp',
+      color_1: '#176fcc',
+      title_2: 'wireshark',
+      img_2: '/images/heo/wireshark.webp',
+      color_2: '#ffa53d'
+    },
+    {
+      title_1: 'ubuntu',
+      img_1: '/images/heo/ubuntu.webp',
+      color_1: '#f47421',
+      title_2: 'idea',
+      img_2: '/images/heo/idea.webp',
       color_2: '#ffffff'
     },
     {
-      title_1: 'Docker',
-      img_1: '/images/heo/20231108a540b2862d26f8850172e4ea58ed075102.webp',
-      color_1: '#57b6e6',
-      title_2: 'Photoshop',
-      img_2: '/images/heo/2023e4058a91608ea41751c4f102b131f267075902.webp',
-      color_2: '#4082c3'
-    },
-    {
-      title_1: 'FinalCutPro',
-      img_1: '/images/heo/20233e777652412247dd57fd9b48cf997c01070702.webp',
+      title_1: 'VMWare',
+      img_1: '/images/heo/vmware.webp',
       color_1: '#ffffff',
-      title_2: 'Python',
-      img_2: '/images/heo/20235c0731cd4c0c95fc136a8db961fdf963071502.webp',
-      color_2: '#ffffff'
-    },
-    {
-      title_1: 'Swift',
-      img_1: '/images/heo/202328bbee0b314297917b327df4a704db5c072402.webp',
-      color_1: '#eb6840',
-      title_2: 'Principle',
-      img_2: '/images/heo/2023f76570d2770c8e84801f7e107cd911b5073202.webp',
-      color_2: '#8f55ba'
-    },
-    {
-      title_1: 'illustrator',
-      img_1: '/images/heo/20237359d71b45ab77829cee5972e36f8c30073902.webp',
-      color_1: '#f29e39',
-      title_2: 'CSS3',
-      img_2: '/images/heo/20237c548846044a20dad68a13c0f0e1502f074602.webp',
-      color_2: '#2c51db'
-    },
-    {
-      title_1: 'JS',
-      img_1: '/images/heo/2023786e7fc488f453d5fb2be760c96185c0075502.webp',
-      color_1: '#f7cb4f',
-      title_2: 'HTML',
-      img_2: '/images/heo/202372b4d760fd8a497d442140c295655426070302.webp',
+      title_2: 'html',
+      img_2: '/images/heo/html.webp',
       color_2: '#e9572b'
     },
     {
-      title_1: 'Git',
-      img_1: '/images/heo/2023ffa5707c4e25b6beb3e6a3d286ede4c6071102.webp',
-      color_1: '#df5b40',
-      title_2: 'Rhino',
-      img_2: '/images/heo/20231ca53fa0b09a3ff1df89acd7515e9516173302.webp',
-      color_2: '#1f1f1f'
+      title_1: 'code',
+      img_1: '/images/heo/code.webp',
+      color_1: '#32cfb0',
+      title_2: 'docker',
+      img_2: '/images/heo/docker.webp',
+      color_2: '#57b6e6'
+    },
+    {
+      title_1: 'css',
+      img_1: '/images/heo/css.webp',
+      color_1: '#101e9e',
+      title_2: 'git',
+      img_2: '/images/heo/git.webp',
+      color_2: '#ffaa00'
+    },
+    {
+      title_1: 'JS',
+      img_1: '/images/heo/js.webp',
+      color_1: '#f7cb4f',
+      title_2: 'mysql',
+      img_2: '/images/heo/mysql.webp',
+      color_2: '#9f9fee'
+    },
+    {
+      title_1: 'python',
+      img_1: '/images/heo/python.webp',
+      color_1: '#ffffff',
+      title_2: 'matlab',
+      img_2: '/images/heo/matlab.webp',
+      color_2: '#edd3ff'
     }
   ],
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: '如果再看你一眼',
-  HEO_SOCIAL_CARD_TITLE_2: '是否还会有感觉',
-  HEO_SOCIAL_CARD_TITLE_3: '青春无悔 2018 - 2024',
-  HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/how-to-question',
+  HEO_SOCIAL_CARD_TITLE_1: 'After long years',
+  HEO_SOCIAL_CARD_TITLE_2: 'How shall i greet thee',
+  HEO_SOCIAL_CARD_TITLE_3: 'NotionNext 开源项目, 搭建你的个人网页 ! ',
+  HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/about',
 
   // *****  以下配置无效，只是预留开发 ****
   // 菜单配置
