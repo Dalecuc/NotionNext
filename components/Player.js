@@ -63,8 +63,10 @@ const Player = () => {
     <div className={playerVisible ? 'visible' : 'invisible'}>
       <link
         rel='stylesheet'
-        type='text/css'
-        href='https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css'
+        type='text/css' 
+        // aplayercss
+        // href='https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css'
+        href="https://jsd.onmicrosoft.cn/gh/Daleveral/csslivb/cssv3.css"
       />
       {meting ? (
         <meting-js

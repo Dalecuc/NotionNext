@@ -391,7 +391,7 @@ function TodayCard({ cRef, siteInfo }) {
         {/* 封面图 */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={siteInfo?.pageCover}
+          src="https://dales-1320948803.cos.ap-beijing.myqcloud.com/0.png"
           id='today-card-cover'
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
