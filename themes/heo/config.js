@@ -15,17 +15,17 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HERO_TITLE_1: 'Hello',
-  HERO_TITLE_2: 'World',
-  HERO_TITLE_3: 'return \'all right\'',
-  HERO_TITLE_4: 'L\'Internationale',
-  HERO_TITLE_5: 'Sera le genre humain',
-  HERO_TITLE_LINK: 'https://github.com/Daleveral',
+  HEO_HERO_TITLE_1: 'Hello',
+  HEO_HERO_TITLE_2: 'World',
+  HEO_HERO_TITLE_3: 'return \'all right\'',
+  HEO_HERO_TITLE_4: 'L\'Internationale',
+  HEO_HERO_TITLE_5: 'Sera le genre humain',
+  HEO_HERO_TITLE_LINK: 'https://github.com/Daleveral',
 
   // 英雄区显示三个置顶分类
-  HERO_CATEGORY_1: { title: 'National Geographic', url: 'https://www.nationalgeographic.com/' },
-  HERO_CATEGORY_2: { title: 'Medium', url: 'https://medium.com/' },
-  HERO_CATEGORY_3: { title: 'Hello GitHub', url: 'https://github.com/521xueweihan/HelloGitHub' },
+  HEO_HERO_CATEGORY_1: { title: 'National Geographic', url: 'https://www.nationalgeographic.com/' },
+  HEO_HERO_CATEGORY_2: { title: 'Medium', url: 'https://medium.com/' },
+  HEO_HERO_CATEGORY_3: { title: 'Hello GitHub', url: 'https://github.com/521xueweihan/HelloGitHub' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '',
@@ -51,7 +51,7 @@ const CONFIG = {
 
 
   // 用户技能图标
-  GROUP_ICONS: [
+  HEO_GROUP_ICONS: [
     {
       title_1: 'ps',
       img_1: '/images/heo/ps.webp',
