@@ -1,3 +1,4 @@
+// 首页各种个性化文字图标
 const CONFIG = {
   HEO_HOME_BANNER_ENABLE: true,
 

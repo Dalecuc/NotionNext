@@ -68,7 +68,7 @@
 }
 
 .notion {
-  font-size: 16px;
+  font-size: 18px;  /* 常规内容字体大小 */
   line-height: 1.5;
   color: var(--fg-color);
   caret-color: var(--fg-color);
@@ -547,7 +547,7 @@ summary > .notion-h {
   border-left: 3px solid currentcolor;
   padding: 0.2em 0.9em;
   margin: 6px 0;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .notion-hr {
@@ -1975,7 +1975,7 @@ svg + .notion-page-title-text {
   border-left: 10px solid;
   padding: 0.2em 0.9em;
   margin: 6px 0;
-  font-size: 1em;
+  font-size: 1em; /* 引用内容字体大小 */
   /* color: var(--notion-gray); */
 }
 
