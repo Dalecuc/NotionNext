@@ -21,12 +21,12 @@ const Artalk = ({ siteInfo }) => {
   const initArtalk = async () => {
     await loadExternalResource(artalkCss, 'css')
     window?.Artalk?.init({
-      server: artalkServer, // 后端地址
+      server: "https://artalk.dalechu.cn", // 后端地址
       el: '#artalk', // 容器元素
       locale: artalkLocale,
       //   pageKey: '/post/1', // 固定链接 (留空自动获取)
       //   pageTitle: '关于引入 Artalk 的这档子事', // 页面标题 (留空自动获取)
-      site: site // 你的站点名
+      site: blog // 你的站点名
     })
   }
   return (
