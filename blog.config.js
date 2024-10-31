@@ -708,10 +708,10 @@ const BLOG = {
   // ArtalkServert后端地址 https://artalk.js.org/guide/deploy.html
   COMMENT_ARTALK_JS:
     process.env.NEXT_PUBLIC_COMMENT_ARTALK_JS ||
-    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.js', // ArtalkServert js cdn
+    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.js', // ArtalkServert js cdn
   COMMENT_ARTALK_CSS:
     process.env.NEXT_PUBLIC_COMMENT_ARTALK_CSS ||
-    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.5.5/Artalk.css', // ArtalkServert css cdn
+    'https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.css', // ArtalkServert css cdn
 
   // twikoo
   COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', 
