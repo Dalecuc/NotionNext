@@ -10,9 +10,9 @@ import { useEffect } from 'react'
 
 const Artalk = ({ siteInfo }) => {
   const artalkCss = siteConfig('COMMENT_ARTALK_CSS')
-  const artalkServer = siteConfig('COMMENT_ARTALK_SERVER')
+  // const artalkServer = siteConfig('COMMENT_ARTALK_SERVER')
   const artalkLocale = siteConfig('LANG')
-  const site = siteConfig('TITLE')
+  // const site = siteConfig('TITLE')
 
   useEffect(() => {
     initArtalk()
@@ -26,7 +26,7 @@ const Artalk = ({ siteInfo }) => {
       locale: artalkLocale,
       //   pageKey: '/post/1', // 固定链接 (留空自动获取)
       //   pageTitle: '关于引入 Artalk 的这档子事', // 页面标题 (留空自动获取)
-      site: blog // 你的站点名
+      site: "blog" // 你的站点名
     })
   }
   return (
