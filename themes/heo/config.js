@@ -1,4 +1,3 @@
-// 首页各种个性化文字图标
 const CONFIG = {
   HEO_HOME_BANNER_ENABLE: true,
 
@@ -21,7 +20,7 @@ const CONFIG = {
   HEO_HERO_TITLE_3: 'return \'all right\'',
   HEO_HERO_TITLE_4: 'L\'Internationale',
   HEO_HERO_TITLE_5: 'Sera le genre humain',
-  HEO_HERO_TITLE_LINK: 'https://github.com/Daleveral',
+  HEO_HERO_TITLE_LINK: '/',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: 'National Geographic', url: 'https://www.nationalgeographic.com/' },
@@ -39,15 +38,15 @@ const CONFIG = {
     '🔍 专扣细节强迫症',
     '🏃 脚踏实地行动派',
     '🤖️ 数码科技爱好者',
-    '🧱 团队小组发动机'
+    '🧱 团队小组摸鱼佬'
   ],
 
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: '/about',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
-  HEO_INFO_CARD_URL2: 'https://liduoyang.com/about',
+  HEO_INFO_CARD_URL2: 'https://github.com/Daleveral',
   HEO_INFO_CARD_ICON2: 'fab fa-github',
-  HEO_INFO_CARD_URL3: 'https://liduoyang.com/about',
+  HEO_INFO_CARD_URL3: '/about',
   HEO_INFO_CARD_TEXT3: '了解更多',
 
 
@@ -113,8 +112,8 @@ const CONFIG = {
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: 'After long years',
-  HEO_SOCIAL_CARD_TITLE_2: 'How shall i greet thee',
-  HEO_SOCIAL_CARD_TITLE_3: 'NotionNext 开源项目, 搭建你的个人网页 ! ',
+  HEO_SOCIAL_CARD_TITLE_2: 'How should i greet thee',
+  HEO_SOCIAL_CARD_TITLE_3: 'NotionNext 开源项目, 搭建你的个人网页 ~ ',
   HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/about',
 
   // *****  以下配置无效，只是预留开发 ****
