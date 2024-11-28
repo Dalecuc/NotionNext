@@ -5,8 +5,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '一个人要仰望多少次', url: 'https://www.best-poems.net/poem/blowin-in-the-wind-by-bob-dylan.html' },
-    { title: '才能看见苍穹', url: 'https://www.best-poems.net/poem/blowin-in-the-wind-by-bob-dylan.html' }
+    { title: '一个人要仰望多少次', url: 'https://www.dalechu.cn/article/thewind' },
+    { title: '才能看见苍穹', url: 'https://www.dalechu.cn/article/thewind' }
   ],
 
   // 英雄区左右侧组件颠倒位置
