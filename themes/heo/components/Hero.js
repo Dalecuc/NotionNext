@@ -73,12 +73,17 @@ function Banner(props) {
     router.push(`${siteConfig('SUB_PATH', '')}/${randomPost?.slug}`)
   }
 
+  // 遮罩文字
+  const coverTitle = siteConfig('HEO_HERO_COVER_TITLE')
+
   return (
     <div
       id='banners'
       onClick={handleClickBanner}
       className='hidden xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden'>
-      <div id='banner-title' className='flex flex-col absolute top-10 left-10'>
+      <div
+        id='banner-title'
+        className='z-10 flex flex-col absolute top-10 left-10'>
         <div className='text-4xl font-bold mb-3  dark:text-white'>
           {siteConfig('HEO_HERO_TITLE_1', null, CONFIG)}
           <br />
@@ -97,10 +102,10 @@ function Banner(props) {
         id='banner-cover'
         style={{ backdropFilter: 'blur(15px)' }}
         className={
-          'rounded-xl overflow-hidden opacity-0 group-hover:opacity-100 duration-300 transition-all bg-[#4259efdd] dark:bg-[#dca846] dark:text-white cursor-pointer absolute w-full h-full top-0 flex justify-start items-center'
+          'z-20 rounded-xl overflow-hidden opacity-0 group-hover:opacity-100 duration-300 transition-all bg-[#4259efdd] dark:bg-[#dca846] dark:text-white cursor-pointer absolute w-full h-full top-0 flex justify-start items-center'
         }>
         <div className='ml-12 -translate-x-32 group-hover:translate-x-0 duration-300 transition-all ease-in'>
-          <div className='text-7xl text-white font-extrabold'>随便逛逛</div>
+          <div className='text-7xl text-white font-extrabold'>{coverTitle}</div>
           <div className='-ml-3 text-gray-300'>
             <ArrowSmallRight className={'w-24 h-24 stroke-2'} />
           </div>
@@ -115,10 +120,10 @@ function Banner(props) {
  * 英雄区左上角banner条中斜向滚动的图标
  */
 function TagsGroupBar() {
-  const groupIcons = siteConfig('HEO_GROUP_ICONS', null, CONFIG).concat(
-    siteConfig('HEO_GROUP_ICONS', null, CONFIG)
-  )
-
+  let groupIcons = siteConfig('HEO_GROUP_ICONS', null, CONFIG)
+  if (groupIcons) {
+    groupIcons = groupIcons.concat(groupIcons)
+  }
   return (
     <div className='tags-group-all flex -rotate-[30deg] h-full'>
       <div className='tags-group-wrapper flex flex-nowrap absolute top-16'>
@@ -173,7 +178,6 @@ function GroupMenu() {
     <div className='h-[165px] select-none xl:h-20 flex flex-col justify-between xl:space-y-0 xl:flex-row w-28 lg:w-48 xl:w-full xl:flex-nowrap xl:space-x-3'>
       <Link
         href={url_1}
-        target='_blank'
         className='group relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-400 flex h-20 justify-start items-center text-white rounded-xl xl:hover:w-1/2 xl:w-1/3 transition-all duration-500 ease-in'>
         <div className='font-bold lg:text-lg  pl-5 relative -mt-2'>
           {title_1}
@@ -185,7 +189,6 @@ function GroupMenu() {
       </Link>
       <Link
         href={url_2}
-        target='_blank'
         className='group relative overflow-hidden bg-gradient-to-r from-red-500 to-yellow-500 flex h-20 justify-start items-center text-white rounded-xl xl:hover:w-1/2 xl:w-1/3 transition-all duration-500 ease-in'>
         <div className='font-bold lg:text-lg pl-5 relative -mt-2'>
           {title_2}
@@ -198,7 +201,6 @@ function GroupMenu() {
       {/* 第三个标签在小屏上不显示 */}
       <Link
         href={url_3}
-        target='_blank'
         className='group relative overflow-hidden bg-gradient-to-r from-teal-300 to-cyan-300 hidden h-20 xl:flex justify-start items-center text-white rounded-xl xl:hover:w-1/2 xl:w-1/3 transition-all duration-500 ease-in'>
         <div className='font-bold text-lg pl-5 relative -mt-2'>
           {title_3}
@@ -391,11 +393,10 @@ function TodayCard({ cRef, siteInfo }) {
           </div>
         </div>
 
-        {/* 封面图(蓝色群山) */}
+        {/* 封面图 */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://dales-1320948803.cos.ap-beijing.myqcloud.com/0.png"
-          
+          src={siteInfo?.pageCover}
           id='today-card-cover'
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
