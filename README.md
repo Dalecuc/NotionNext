@@ -1,3 +1,3 @@
 - NotionNext 博客主页
-- 此为试验仓库, 对应 Vercel 镜像站 : https://www.epicurus.fun
+- 此为试验仓库, 版本 v4.7.11 . 对应 Vercel 镜像站 : https://www.epicurus.fun
 - [云服务器对应仓库](https://github.com/Daleveral/NotionNext), 主站 : https://www.dalechu.cn
