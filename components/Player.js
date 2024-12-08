@@ -43,7 +43,7 @@ const Player = () => {
         new window.APlayer({
           container: ref.current,
           fixed: true,
-	        listMaxHeight: '500px',
+          listMaxHeight: '500px',
           lrcType: lrcType,
           autoplay: autoPlay,
           order: order,
