@@ -38,11 +38,12 @@ const Player = () => {
       await loadExternalResource(musicMetingCDNUrl, 'js')
     }
 
-    if (!meting && window.APlayer) {
+    if (!meting && window.APlayer) { // aplayer 主要配置
       setPlayer(
         new window.APlayer({
           container: ref.current,
           fixed: true,
+	        listMaxHeight: '500px',
           lrcType: lrcType,
           autoplay: autoPlay,
           order: order,
