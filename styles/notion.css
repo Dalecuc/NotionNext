@@ -1,5 +1,5 @@
 :root {
-  --fg-color: rgb(0, 0, 0);
+  --fg-color: rgb(0, 0, 0) !important;
   --fg-color-0: rgba(55, 53, 47, 0.09);
   --fg-color-1: rgba(55, 53, 47, 0.16);
   --fg-color-2: rgba(55, 53, 47, 0.4);
@@ -68,7 +68,7 @@
 }
 
 .notion {
-  font-size: 18px;  /* 常规内容字体大小 */
+  font-size: 16px;
   line-height: 1.5;
   color: var(--fg-color);
   caret-color: var(--fg-color);
@@ -403,7 +403,8 @@ summary > .notion-h {
 .notion-h1 {
   font-size: 1.575em;
   margin-top: 1.08em;
-  @apply border-b w-full;
+  @apply w-full;
+  /* @apply border-b w-full; */
 }
 .notion-h2 {
   @apply w-full;
@@ -547,14 +548,14 @@ summary > .notion-h {
   border-left: 3px solid currentcolor;
   padding: 0.2em 0.9em;
   margin: 6px 0;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .notion-hr {
   width: 100%;
   margin: 6px 0;
   padding: 0;
-  border-bottom-width: 1px;
+  /* border-bottom-width: 1px; */
 }
 
 .notion-link {
@@ -1451,7 +1452,6 @@ code[class*='language-'] {
 
 .notion-collection-card-property .notion-page-title-text {
   border-bottom: 0 none;
-  @apply dark:text-gray-200;
 }
 
 .notion-collection-card-property
@@ -1469,6 +1469,7 @@ code[class*='language-'] {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
+  @apply dark:text-gray-200;
 }
 
 .notion-collection-row {
@@ -1664,9 +1665,8 @@ code[class*='language-'] {
 }
 
 /* NOTION CSS OVERRIDE */
-
 .notion {
-  @apply dark:text-gray-300;
+  @apply dark:text-gray-100;
   overflow-wrap: break-word;
 }
 .notion,
@@ -1796,8 +1796,7 @@ svg + .notion-page-title-text {
   display: inline-block;
   width: 14px;
   height: 14px;
-  /* fill: var(--fg-color); */
-  fill: rgba(55, 53, 47);
+  fill: var(--fg-color);
   margin-right: 6px;
   @apply dark:fill-gray-200;
 }
@@ -1975,7 +1974,7 @@ svg + .notion-page-title-text {
   border-left: 10px solid;
   padding: 0.2em 0.9em;
   margin: 6px 0;
-  font-size: 1em; /* 引用内容字体大小 */
+  font-size: 1em;
   /* color: var(--notion-gray); */
 }
 
