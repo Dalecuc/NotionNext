@@ -17,8 +17,8 @@ export function AnalyticsCard(props) {
         <div className='text-md flex flex-col space-y-1 justify-center px-3'>
             <div className='inline'>
                 <div className='flex justify-between'>
-                    <div>文章数:</div>
-                    <div>{postCount}</div>
+                    <div>帖子数:</div>
+                    <div>{postCount} 篇</div>
                 </div>
             </div>
             <div className='inline'>

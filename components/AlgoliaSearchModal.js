@@ -359,7 +359,8 @@ function TagGroups() {
           <Link
             passHref
             key={index}
-            href={`/tag/${encodeURIComponent(tag.name)}`}
+            href={tag.name === '打赏作者' ? '/article/s' : `/tag/${encodeURIComponent(tag.name)}`}
+            // href={`/tag/${encodeURIComponent(tag.name)}`}
             className={'cursor-pointer inline-block whitespace-nowrap'}>
             <div
               className={
