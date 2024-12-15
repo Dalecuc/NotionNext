@@ -399,7 +399,7 @@ function TodayCard({ cRef, siteInfo }) {
         {/* 封面图 */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://picscdn.dalechu.cn/0.png"
+          src="https://picscdn.dalechu.cn/0.png" // 蓝山图
           id='today-card-cover'
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
