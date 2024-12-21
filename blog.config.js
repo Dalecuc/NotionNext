@@ -1,11 +1,13 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/article/how-to-config-notion-next#c4768010ae7d44609b744e79e2f9959a
-const BLOG = {
+
+const BLOG = 
+{
   // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
   NOTION_PAGE_ID:
     process.env.NOTION_PAGE_ID ||
     '4847b65b22994f138f58b89b998c5f99,en:4847b65b22994f138f58b89b998c5f99',
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
-  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 5, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
+  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 25, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
   THEME: process.env.NEXT_PUBLIC_THEME || 'heo', // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
@@ -41,7 +43,7 @@ const BLOG = {
   CONTACT_YOUTUBE: process.env.NEXT_PUBLIC_CONTACT_YOUTUBE || '', // Youtube主页
   CONTACT_XIAOHONGSHU: process.env.NEXT_PUBLIC_CONTACT_XIAOHONGSHU || '', // 小红书主页
   CONTACT_ZHISHIXINGQIU: process.env.NEXT_PUBLIC_CONTACT_ZHISHIXINGQIU || '', // 知识星球
-  CONTACT_WEHCHAT_PUBLIC: process.env.NEXT_PUBLIC_CONTACT_WEHCHAT_PUBLIC || '', // 微信公众号 格式：https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=【xxxxxx】==#wechat_redirect
+  CONTACT_WEHCHAT_PUBLIC: process.env.NEXT_PUBLIC_CONTACT_WEHCHAT_PUBLIC || '', // 微信公众号 格���：https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=【xxxxxx】==#wechat_redirect
 
   NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://www.notion.so', // Notion域名，您可以选择用自己的域名进行反向代理，如果不懂得什么是反向代理，请勿修改此项
 
@@ -231,7 +233,7 @@ const BLOG = {
   ALGOLIA_APP_ID: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || null, // 在这里查看 https://dashboard.algolia.com/account/api-keys/
   ALGOLIA_ADMIN_APP_KEY: process.env.ALGOLIA_ADMIN_APP_KEY || null, // 管理后台的KEY，不要暴露在代码中，在这里查看 https://dashboard.algolia.com/account/api-keys/
   ALGOLIA_SEARCH_ONLY_APP_KEY:
-    process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_APP_KEY || null, // 客户端搜索用的KEY
+    process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_APP_KEY || null, // ��户端搜索用的KEY
   ALGOLIA_INDEX: process.env.NEXT_PUBLIC_ALGOLIA_INDEX || null, // 在Algolia中创建一个index用作数据库
   //   ALGOLIA_RECREATE_DATA: process.env.ALGOLIA_RECREATE_DATA || process.env.npm_lifecycle_event === 'build', // 为true时重新构建索引数据; 默认在build时会构建
 
@@ -256,7 +258,7 @@ const BLOG = {
   // 鼠标跟随特效
   MOUSE_FOLLOW: process.env.NEXT_PUBLIC_MOUSE_FOLLOW || true, // 开关
   // 这两个只有在鼠标跟随特效开启时才生效
-  // 鼠标类型 1：路劲散点 2：下降散点 3：上升散点 4：边缘向鼠标移动散点 5：跟踪转圈散点 6：路径线条 7：聚集散点 8：聚集网格 9：移动网格 10：上升粒子 11：转圈随机颜色粒子 12：圆锥放射跟随蓝色粒子
+  // 鼠标类型 1：路劲散点 2：下降散点 3：上升散点 4：边缘向鼠标移动散点 5：跟踪转圈散点 6：路径线条 7��聚集散点 8：聚集网格 9：移动网格 10：上升粒子 11：转圈随机颜色粒子 12：圆锥放射跟随蓝色粒子
   MOUSE_FOLLOW_EFFECT_TYPE: 11, // 1-12
   MOUSE_FOLLOW_EFFECT_COLOR: '#ef672a', // 鼠标点击特效颜色 #xxxxxx 或者 rgba(r,g,b,a)
 
@@ -311,386 +313,9 @@ const BLOG = {
     'https://jsd.onmicrosoft.cn/gh/Daleveral/csslivb/jsv2.js', // 使用自定义的 js
     // Aplayer.min.css 位置请 Ctrl Shift F 搜索 "aplayercss"
   MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'list', // 默认播放方式，顺序 list，随机 random
-  MUSIC_PLAYER_AUDIO_LIST: [
-    // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
+  MUSIC_PLAYER_AUDIO_LIST: process.env.NEXT_PUBLIC_MUSIC_PLAYER_AUDIO_LIST || MUSIC_AUDIO_LIST,
 
-    {
-          name: 'なんでもないや',
-          artist: 'Akie秋绘',
-          url: 'http://music.163.com/song/media/outer/url?id=450795499.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Merry Christmas Mr. Lawrence',
-          artist: '坂本龍一',
-          url: 'http://music.163.com/song/media/outer/url?id=1893923634.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '风を共に舞う気持ち',
-          artist: 'Falcom Sound Team jdk',
-          url: 'https://music.163.com/song/media/outer/url?id=731419.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '王都グランセル',
-          artist: 'Falcom Sound Team jdk',
-          url: 'https://music.163.com/song/media/outer/url?id=731355.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Only Time',
-          artist: 'Enya',
-          url: 'http://music.163.com/song/media/outer/url?id=29470947.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Yesterday Once More',
-          artist: 'Carpenters',
-          url: 'http://music.163.com/song/media/outer/url?id=3986241.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: "My Love",
-          artist: 'Westlife',
-          url: 'http://music.163.com/song/media/outer/url?id=2081191.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: "In the End",
-          artist: 'Linkin Park',
-          url: 'http://music.163.com/song/media/outer/url?id=16686470.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'You',
-          artist: 'Approaching Nirvana',
-          url: 'http://music.163.com/song/media/outer/url?id=1891437743.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Young and Beautiful',
-          artist: 'Lana Del Rey',
-          url: 'http://music.163.com/song/media/outer/url?id=28952209.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Dirty Paws',
-          artist: 'Of Monsters And Men',
-          url: 'http://music.163.com/song/media/outer/url?id=1890665790.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Beautiful',
-          artist: 'Virginia To Vegas',
-          url: 'http://music.163.com/song/media/outer/url?id=29722661.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'We Are Young',
-          artist: 'Fun, Janelle Monáe',
-          url: 'http://music.163.com/song/media/outer/url?id=28329964.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'The Nights',
-          artist: 'Avicii',
-          url: 'http://music.163.com/song/media/outer/url?id=1826923389.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'That Girl',
-          artist: 'Olly Murs',
-          url: 'http://music.163.com/song/media/outer/url?id=864650750.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'You Raise Me Up',
-          artist: 'Westlife',
-          url: 'http://music.163.com/song/media/outer/url?id=20707713.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Mr.Moustafa',
-          artist: 'Alexandre Desplat',
-          url: 'http://music.163.com/song/media/outer/url?id=28289088.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Waiting for Love',
-          artist: 'Avicii',
-          url: 'http://music.163.com/song/media/outer/url?id=1842927464.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Gotta Have You',
-          artist: 'The Weepies',
-          url: 'http://music.163.com/song/media/outer/url?id=19572271.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'The Saltwater Room',
-          artist: 'Owl City',
-          url: 'http://music.163.com/song/media/outer/url?id=1807828.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'What Are Words',
-          artist: 'Chris Medina',
-          url: 'http://music.163.com/song/media/outer/url?id=1210496.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'NEW BOY',
-          artist: '朴树',
-          url: 'http://music.163.com/song/media/outer/url?id=28996919.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Color Blind',
-          artist: 'Matt B',
-          url: 'http://music.163.com/song/media/outer/url?id=1910991521.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'New Soul',
-          artist: 'Yael Naim',
-          url: 'http://music.163.com/song/media/outer/url?id=2010944681.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'arhbo ( 球员入阵 )',
-          artist: 'Gims/Ozuna',
-          url: 'http://music.163.com/song/media/outer/url?id=2042622526.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '莫斯科郊外的晚上',
-          artist: '中央音乐合唱团',
-          url: 'http://music.163.com/song/media/outer/url?id=5280398.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Sound of Silence',
-          artist: 'Simon & Garfunkel',
-          url: 'http://music.163.com/song/media/outer/url?id=491424530.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Hayya Hayya',
-          artist: 'Trinidad Cardona,DaVido,Aisha',
-          url: 'http://music.163.com/song/media/outer/url?id=1933800693.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'What Makes You Beautiful',
-          artist: 'One Direction',
-          url: 'http://music.163.com/song/media/outer/url?id=27218979.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '海阔天空',
-          artist: 'Beyond',
-          url: 'http://music.163.com/song/media/outer/url?id=1357374736.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '喜欢你',
-          artist: 'Beyond',
-          url: 'http://music.163.com/song/media/outer/url?id=346163.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Go West',
-          artist: 'Pet Shop Boys',
-          url: 'http://music.163.com/song/media/outer/url?id=27198266.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Iridescent',
-          artist: 'Linkin Park',
-          url: 'http://music.163.com/song/media/outer/url?id=25639052.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '亡命之徒',
-          artist: '纵贯线',
-          url: 'http://music.163.com/song/media/outer/url?id=5237863.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '起风了',
-          artist: '买辣椒也用券',
-          url: 'http://music.163.com/song/media/outer/url?id=1330348068.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '小城大事',
-          artist: '杨千嬅',
-          url: 'http://music.163.com/song/media/outer/url?id=1357379611.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '富士山下',
-          artist: '陈奕迅',
-          url: 'http://music.163.com/song/media/outer/url?id=1851228561.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Here with You',
-          artist: 'Asher Monroe',
-          url: 'http://music.163.com/song/media/outer/url?id=27583305.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Imagine',
-          artist: 'John Lennon',
-          url: 'http://music.163.com/song/media/outer/url?id=1476431.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Hey Jude',
-          artist: 'The Beatles',
-          url: 'http://music.163.com/song/media/outer/url?id=5201810.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Summer',
-          artist: '久石让',
-          url: 'http://music.163.com/song/media/outer/url?id=1867107328.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Yellow',
-          artist: 'Coldplay',
-          url: 'http://music.163.com/song/media/outer/url?id=26807310.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '最佳损友',
-          artist: '陈奕迅',
-          url: 'http://music.163.com/song/media/outer/url?id=65800.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '理想三旬',
-          artist: '陈鸿宇',
-          url: 'http://music.163.com/song/media/outer/url?id=31445772.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '北京东路的日子', 
-          artist: '群星',
-          url: 'http://music.163.com/song/media/outer/url?id=458245372.mp3', 
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'PLANET', 
-          artist: 'ラムジ',
-          url: 'http://music.163.com/song/media/outer/url?id=812400.mp3', 
-          cover: '/aplayer.png'
-    },
-    {
-          name: '凤凰花开的路口',
-          artist: '林志炫',
-          url: 'http://music.163.com/song/media/outer/url?id=109734.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '好久不见',
-          artist: '陈奕迅',
-          url: 'http://music.163.com/song/media/outer/url?id=65538.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '愿得一人心',
-          artist: '李行亮',
-          url: 'http://music.163.com/song/media/outer/url?id=25731646.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name:  '七月上',
-          artist: 'Jam',
-          url: 'http://music.163.com/song/media/outer/url?id=31445554.mp3',
-          cover: '/aplayer.png'
-    },   
-    {
-          name: '光阴的故事',
-          artist: '罗大佑',
-          url: 'http://music.163.com/song/media/outer/url?id=109545.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'K歌之王',
-          artist: '陈奕迅',
-          url: 'http://music.163.com/song/media/outer/url?id=1897928899.mp3',
-          cover: '/aplayer.png'
-    },
-
-    {
-          name: 'Last First Kiss',
-          artist: 'One Direction',
-          url: 'http://music.163.com/song/media/outer/url?id=25882975.mp3',
-          cover: '/aplayer.png'
-    },
-
-    {
-          name: '水星记',
-          artist: '郭顶',
-          url: 'http://music.163.com/song/media/outer/url?id=441491828.mp3',
-          cover: '/aplayer.png'
-    },
-
-    {
-          name: 'Look At Me Now',
-          artist: 'Charlie Puth',
-          url: 'http://music.163.com/song/media/outer/url?id=28188171.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Brought Up That Way',
-          artist: 'Taylor Swift',
-          url: 'http://music.163.com/song/media/outer/url?id=2001660.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'Demons',
-          artist: 'Imagine Dragons',
-          url: 'http://music.163.com/song/media/outer/url?id=19945727.mp3',
-          cover: '/aplayer.png'
-    },
-
-    {
-          name: 'Bones',
-          artist: 'Imagine Dragons',
-          url: 'http://music.163.com/song/media/outer/url?id=1927389937.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '东方之珠',
-          artist: '罗大佑',
-          url: 'http://music.163.com/song/media/outer/url?id=108653.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '漠河舞厅',
-          artist: '柳爽',
-          url: 'http://music.163.com/song/media/outer/url?id=1894094482.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: '杀死那个石家庄人',
-          artist: '万能青年旅店',
-          url: 'http://music.163.com/song/media/outer/url?id=386844.mp3',
-          cover: '/aplayer.png'
-    },
-    {
-          name: 'The Spectre',
-          artist: 'Alan Walker',
-          url: 'http://music.163.com/song/media/outer/url?id=1398324033.mp3',
-          cover: '/aplayer.png'
-    }
-  ],
+  
   MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
   MUSIC_PLAYER_METING_SERVER:
     process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_SERVER || 'netease', // 音乐平台，[netease, tencent, kugou, xiami, baidu]
@@ -864,7 +489,7 @@ const BLOG = {
       process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_NOTICE || 'Notice', // 当type文章类型与此值相同时，为公告。
     type_menu: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_MENU || 'Menu', // 当type文章类型与此值相同时，为菜单。
     type_sub_menu:
-      process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_SUB_MENU || 'SubMenu', // 当type文章类型与此值相同时，为子菜单。
+      process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_SUB_MENU || 'SubMenu', // 当type文章类型与此值相同时，为子��单。
     title: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TITLE || 'title', // 文章标题
     status: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS || 'status',
     status_publish:
