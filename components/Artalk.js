@@ -20,7 +20,7 @@ const Artalk = ({ siteInfo }) => {
 
   const initArtalk = async () => {
     await loadExternalResource(artalkCss, 'css')
-    window?.Artalk?.init({
+    const artalk = window?.Artalk?.init({
       server: artalkServer,
       el: '#artalk',
       locale: artalkLocale,
@@ -32,7 +32,7 @@ const Artalk = ({ siteInfo }) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === 'class') {
           const isDark = document.documentElement.classList.contains('dark')
-          window?.Artalk?.update({ darkMode: isDark })
+          artalk?.setDarkMode(isDark)
         }
       })
     })
