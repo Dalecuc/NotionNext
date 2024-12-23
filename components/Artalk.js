@@ -16,34 +16,21 @@ const Artalk = ({ siteInfo }) => {
 
   useEffect(() => {
     initArtalk()
-    
-    // 监听系统主题变化
-    const darkModeObserver = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains('dark')
-      window?.Artalk?.ctx?.setDarkMode?.(isDark)
-    })
-
-    darkModeObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class']
-    })
-
-    return () => {
-      darkModeObserver.disconnect()
-    }
   }, [])
 
   const initArtalk = async () => {
     await loadExternalResource(artalkCss, 'css')
     window?.Artalk?.init({
-      server: artalkServer,
-      el: '#artalk',
+      server: artalkServer, // 后端地址
+      el: '#artalk', // 容器元素
       locale: artalkLocale,
-      site: site,
-      // 初始化时设置夜间模式
-      darkMode: document.documentElement.classList.contains('dark')
+      //   pageKey: '/post/1', // 固定链接 (留空自动获取)
+      //   pageTitle: '关于引入 Artalk 的这档子事', // 页面标题 (留空自动获取)
+      site: site // 你的站点名
     })
   }
+
+  artalkInstance.setDarkMode(true)
   return (
         <div id="artalk"></div>
   )
