@@ -13,24 +13,6 @@ export const MenuListSide = props => {
       name: locale.NAV.ARCHIVE,
       href: '/archive',
       show: siteConfig('HEO_MENU_ARCHIVE', null, CONFIG)
-    },
-    {
-      icon: 'fas fa-search',
-      name: locale.NAV.SEARCH,
-      href: '/search',
-      show: siteConfig('HEO_MENU_SEARCH', null, CONFIG)
-    },
-    {
-      icon: 'fas fa-folder',
-      name: locale.COMMON.CATEGORY,
-      href: '/category',
-      show: siteConfig('HEO_MENU_CATEGORY', null, CONFIG)
-    },
-    {
-      icon: 'fas fa-tag',
-      name: locale.COMMON.TAGS,
-      href: '/tag',
-      show: siteConfig('HEO_MENU_TAG', null, CONFIG)
     }
   ]
 

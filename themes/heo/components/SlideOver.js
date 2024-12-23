@@ -68,7 +68,8 @@ export default function SlideOver(props) {
                 leave='transform transition ease-in-out duration-500 sm:duration-700'
                 leaveFrom='translate-x-0'
                 leaveTo='translate-x-full'>
-                <Dialog.Panel className='pointer-events-auto relative w-96 max-w-md'>
+                {/* 宽度修改下一行 w- 后面的数值  */}
+                <Dialog.Panel className='pointer-events-auto relative w-72 max-w-md'> 
                   <Transition.Child
                     as={Fragment}
                     enter='ease-in-out duration-500'
@@ -102,11 +103,14 @@ export default function SlideOver(props) {
                           <Button title={'主页'} url={'/'} />
                           <Button title={'关于'} url={'/about'} />
                         </div>
-                        {/* 用户自定义菜单 */}
+                        {/* 用户自定义菜单, 零碎、关于、归档、友链、分类、搜索等 */}
                         <MenuListSide {...props} />
+
+
                       </section>
 
                       <section className='space-y-2 flex flex-col'>
+                        {/* 标签 */}
                         <div>{locale.COMMON.TAGS}</div>
                         <TagGroups tags={tagOptions} />
                       </section>
